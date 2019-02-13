@@ -1,0 +1,52 @@
+//color
+
+$white : #FFF;
+$color-primary: #878787;
+$color-secondary : #4CD9B5;
+$color-default : #1ab2ff;
+
+//button
+
+$button-default: $color-default;
+$button-success: #40bf40;
+$button-error: #ff4d4d;
+$button-warning: #ff6600;
+$button-info: #993399;
+
+
+
+//grid
+
+$col-12: #33ff99;
+$col-6:#0066cc;
+$col-4: #b3d9ff;
+$col-3: #ff99ff;
+$col-5: #00cc44;
+$col-7: #ff6666;
+$col-8: #ff471a;
+$col-center: #ff5050;
+
+
+$font-primary : 'Open Sans',
+sans-serif;
+
+//text
+
+$text-align : left;
+$text-align-ctr : center;
+$font-bold : bold;
+
+//sizing
+
+$g-col-count : 12;
+$g-col-width : 50px;
+$g-gutter-width : 10px;
+
+
+
+$border : .3em;
+
+//Break point
+$break-md : 768px;
+$break-lg : 992px;
+$break-xl : 1100px;

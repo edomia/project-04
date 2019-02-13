@@ -1,0 +1,33 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+.nav {
+  @include mq('md') {
+    @include flex {
+      padding-top: .5em;
+      padding-bottom: 0;
+      justify-content: flex-end;
+
+    }
+  }
+  
+  &__item {
+    padding: 1em 0;
+    @include mq('md') {
+      padding: .5em 1em;
+    }
+    &:hover {
+      background-color: $color-secondary;
+      border-radius: $border;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: $color-primary;
+      &:hover {
+      color: $white;
+      }
+    }
+  }
+}

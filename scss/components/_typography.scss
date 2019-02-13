@@ -1,0 +1,51 @@
+// ==========================================================================
+// Typography 
+// ==========================================================================
+
+.container {
+	font-family: $font-primary;
+	text-align: $text-align-ctr;
+	color: $color-primary;
+	line-height: 1.6;
+	font-size: 1rem;
+}
+
+.headline {
+	&--secondary {
+		text-align: $text-align;
+		font-weight: 100;
+		margin-bottom: 2em;
+	}
+
+	&--primary {
+		text-align: $text-align;
+		font-weight: $font-bold;
+		padding-left: .7em;
+		padding-right: 3em;
+		color: $color-secondary;
+		font-size: 1.8rem;
+
+		@include mq('md') {
+			padding-right: 0;
+			font-size: 1.5rem;
+			text-align: left;
+		}
+	}
+}
+
+.link {
+	color: $color-secondary;
+	text-decoration: none;
+	font-weight: $font-bold;
+}
+
+.blockquote {
+	margin-bottom: 1.5em;
+	padding-left: 1em;
+	text-align: $text-align;
+	font-style: italic;
+	font-size: 1.6rem;
+	border-left: 10px solid $color-secondary;
+	border-radius: 4px;
+	line-height: 1.2;
+}

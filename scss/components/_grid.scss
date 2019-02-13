@@ -1,0 +1,39 @@
+// -----------------------------------------------------------
+// Grid
+// -----------------------------------------------------------
+
+@for $i from 1 through 12 {
+  .grid__col--#{$i}.theme__colors {
+    @if ($i == 12) {
+       @include grid($col-12);
+    }
+    @else if ($i == 6) {
+       @include grid($col-6);
+    }
+    @else if ($i == 4) {
+      @include grid($col-4);
+    }
+    @else if ($i == 3) {
+      @include grid($col-3);
+    }
+    @else if ($i == 5) {
+      @include grid($col-5);
+    }
+    @else if ($i == 7) {
+      @include grid($col-7);
+    }
+    @else if ($i == 8) {
+      @include grid($col-8);
+    }
+    
+    
+    @include mq('md') {
+      margin: 0 10px;
+      text-align: $text-align-ctr;
+      @include flex {
+        justify-content: center;
+      }
+    }
+  }
+}
+

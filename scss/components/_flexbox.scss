@@ -1,0 +1,49 @@
+// -----------------------------------------------------------
+// Flexbox 
+// -----------------------------------------------------------
+
+.grid {
+  &__row {
+    margin-bottom: 3em;
+    @include mq('md') {
+      @include flex {
+        justify-content: space-around;
+      }
+    }
+  }
+
+  &__col {
+    @include mq('md') {
+      @include g-columns;
+      }
+    }
+
+  &__col--3{
+    @include mq('lg') {
+      margin-right: 4em;
+    }
+    
+  }
+	
+  &__col--8 {
+    @include mq('xl') {
+      padding-right: 4em;
+      width: 60%;
+    }
+  }
+	
+  &__col--9 {
+    @include mq('lg') {
+      margin-left: 16em;
+    }
+    
+  }
+&__col--12 {
+    @include mq('md') {
+      @include flex {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+ 

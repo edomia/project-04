@@ -1,0 +1,71 @@
+@mixin btn ($btn) {
+  width: 96%;
+  padding: .9em 0;
+  margin-bottom: 1.5em;
+  border-radius: $border;
+  border: none;
+  color: $white;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: bolder;
+  background-color: $btn;
+}
+
+// Grid
+@mixin grid ($bg_clr) {
+  width: 100%;
+  padding: .7em .7em .7em .5em;
+  margin-bottom: .5em;
+  border-radius: $border;
+  border: none;
+  color: rgba(0, 0, 0, 0.349);
+  font-size: .9rem;
+  font-weight: $font-bold;
+  background-color: $bg_clr;
+}
+
+
+// Grid sizing
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    // Generate column modifier classes
+    &--#{$i} {
+      flex-basis: percentage($target / $context);
+    }
+  }
+}
+
+// Media Queries
+
+  @else if $break == 'md' {
+    @media (min-width: $break-md) {
+      @content;
+    }
+  }
+  
+  @else if $break == 'lg' {
+    @media (min-width: $break-lg) {
+      @content;
+    }
+  }
+  
+  @else if $break == 'xl' {
+    @media (min-width: $break-xl) {
+      @content;
+    }
+  }
+}
+
+//Flexbox
+@mixin flex {
+  display: flex;
+  @content;
+}
+
+
+
+
+  
+  
